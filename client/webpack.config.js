@@ -63,7 +63,7 @@ module.exports = () => {
         {
           // Babel loader so that we can use ES6
           test: /\.m?js$/,
-          excludes: /node_modules/,
+          exclude: /node_modules/,
           use: {
             loader: "babel-loader",
             options: {
