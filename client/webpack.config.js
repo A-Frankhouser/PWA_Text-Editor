@@ -57,7 +57,7 @@ module.exports = () => {
       rules: [
         {
           // CSS loader
-          test: /\.css$/,
+          test: /\.css$/i,
           use: ["style-loader", "css-loader"],
         },
         {
@@ -68,10 +68,7 @@ module.exports = () => {
             loader: "babel-loader",
             options: {
               presets: ["@babel/present-env"],
-              plugins: [
-                "@babel/plugin-proposal-object-rest-spread",
-                "@babel/transform-runtime",
-              ],
+              plugins: ["@babel/plugin-proposal-object-rest-spread", "@babel/transform-runtime"],
             },
           },
         },
